@@ -4,6 +4,43 @@ echo "port=${TCP_PORT}" >> /etc/minidlna.conf
 echo "friendly_name=${FRIENDLY_NAME}" >> /etc/minidlna.conf
 echo "serial=${SERIAL}" >> /etc/minidlna.conf
 
+# All media dirs
+if [[ ! -z "${ALL_MEDIA_DIR1}" ]]; then
+  echo "media_dir=${ALL_MEDIA_DIR1}" >> /etc/minidlna.conf
+fi
+
+if [[ ! -z "${ALL_MEDIA_DIR2}" ]]; then
+  echo "media_dir=${ALL_MEDIA_DIR2}" >> /etc/minidlna.conf
+fi
+
+if [[ ! -z "${ALL_MEDIA_DIR3}" ]]; then
+  echo "media_dir=${ALL_MEDIA_DIR3}" >> /etc/minidlna.conf
+fi
+
+if [[ ! -z "${ALL_MEDIA_DIR4}" ]]; then
+  echo "media_dir=${ALL_MEDIA_DIR4}" >> /etc/minidlna.conf
+fi
+
+if [[ ! -z "${ALL_MEDIA_DIR5}" ]]; then
+  echo "media_dir=${ALL_MEDIA_DIR5}" >> /etc/minidlna.conf
+fi
+
+if [[ ! -z "${ALL_MEDIA_DIR6}" ]]; then
+  echo "media_dir=${ALL_MEDIA_DIR6}" >> /etc/minidlna.conf
+fi
+
+if [[ ! -z "${ALL_MEDIA_DIR7}" ]]; then
+  echo "media_dir=${ALL_MEDIA_DIR7}" >> /etc/minidlna.conf
+fi
+
+if [[ ! -z "${ALL_MEDIA_DIR8}" ]]; then
+  echo "media_dir=${ALL_MEDIA_DIR8}" >> /etc/minidlna.conf
+fi
+
+if [[ ! -z "${ALL_MEDIA_DIR9}" ]]; then
+  echo "media_dir=${ALL_MEDIA_DIR9}" >> /etc/minidlna.conf
+fi
+
 # Video
 if [[ ! -z "${VIDEO_DIR1}" ]]; then
   echo "media_dir=V,${VIDEO_DIR1}" >> /etc/minidlna.conf
@@ -115,4 +152,4 @@ if [[ ! -z "${PICTURES_DIR9}" ]]; then
   echo "media_dir=P,${PICTURES_DIR9}" >> /etc/minidlna.conf
 fi
 
-/usr/sbin/minidlnad -d -R
+/usr/sbin/minidlnad -P /cache/instance.pid -S -r

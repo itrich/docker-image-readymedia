@@ -1,5 +1,5 @@
-FROM alpine:3.10
-LABEL MAINTAINER "Dirk Stichling <mytracks@mytracks4mac.com>"
+FROM alpine:3
+LABEL MAINTAINER "Yehor Popovych <popovych.yegor@gmail.com>"
 
 RUN apk add --no-cache minidlna
 

@@ -2,9 +2,11 @@ name: buildx
 
 on:
   pull_request:
-    branches: master
+    branches:
+      - "master"
   push:
-    branches: master
+    branches:
+      - "master"
 
 jobs:
   buildx:
@@ -30,4 +32,4 @@ jobs:
             --platform linux/amd64,linux/arm/v7,linux/arm64 \
             --output "type=image,push=true" \
             --file ./Dockerfile . \
-            --tag mytracks/readymedia:latest
+            --tag ypopovych/readymedia:latest

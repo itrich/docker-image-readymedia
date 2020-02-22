@@ -22,6 +22,7 @@ You can configure the container using the following environment variables:
 | `FRIENDLY_NAME`  | The user visible name of this instance. | `My ReadyMedia Server` |
 | `TCP_PORT`  | The TCP port used by the service.  | `8200` |
 | `SERIAL`  | An arbitrary number for this instance.  | `1234567890` |
+| `ALL_MEDIA_DIR[1-9]`  | Path to a directory containing all types of files  |  |
 | `VIDEO_DIR[1-9]`  | Path to a directory containing video files  |  |
 | `AUDIO_DIR[1-9]`  | Path to a directory containing audio files  |  |
 | `PICTURES_DIR[1-9]`  | Path to a directory containing picture files  |  |
@@ -54,7 +55,7 @@ spec:
       hostNetwork: true
       containers:
       - name: readymedia
-        image: mytracks/readymedia
+        image: ypopovych/readymedia
         env:
         - name: VIDEO_DIR1
           value: /media/my_video_files
