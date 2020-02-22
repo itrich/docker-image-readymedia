@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [[ ! -f "/cache/minidlna.conf" ]] then
+if [[ ! -f "/cache/minidlna.conf" ]]; then
   cp /etc/minidlna.conf /cache/
 fi
 
